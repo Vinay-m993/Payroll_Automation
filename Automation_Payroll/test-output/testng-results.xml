@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="15511" started-at="2021-01-13T20:43:11 IST" finished-at="2021-01-13T20:43:26 IST">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="15511" started-at="2021-01-13T20:43:11 IST" finished-at="2021-01-13T20:43:26 IST">
+      <class name="testScripts.LoginTest">
+        <test-method status="PASS" signature="launchBrowser(java.lang.String, java.lang.String)[pri:0, instance:testScripts.LoginTest@3b088d51]" name="launchBrowser" is-config="true" duration-ms="13664" started-at="2021-01-13T20:43:11 IST" finished-at="2021-01-13T20:43:25 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://www.qabible.in/payrollapp/site/login]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="verifyLoginCredentials(java.lang.String, java.lang.String)[pri:0, instance:testScripts.LoginTest@3b088d51]" name="verifyLoginCredentials" duration-ms="1003" started-at="2021-01-13T20:43:25 IST" data-provider="readExcel" finished-at="2021-01-13T20:43:26 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[carol]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1q2w3e4r]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginCredentials -->
+        <test-method status="PASS" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:testScripts.LoginTest@3b088d51]" name="closeBrowser" is-config="true" duration-ms="415" started-at="2021-01-13T20:43:26 IST" finished-at="2021-01-13T20:43:26 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyLoginCredentials status=SUCCESS method=LoginTest.verifyLoginCredentials(java.lang.String, java.lang.String)[pri:0, instance:testScripts.LoginTest@3b088d51] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- testScripts.LoginTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
