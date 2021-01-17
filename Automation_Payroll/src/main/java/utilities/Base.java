@@ -47,7 +47,7 @@ public class Base {
 		if (ITestResult.FAILURE == result.getStatus()) {
 			TakesScreenshot takeScreenshot = (TakesScreenshot) driver;
 			File screenShot = takeScreenshot.getScreenshotAs(OutputType.FILE);
-			FileUtils.copyFile(screenShot, new File("./Screenshots/" + result.getName() + ".png"));
+			FileUtils.copyFile(screenShot, new File("./FailedTestsScreenshots/" + result.getName() + ".png"));
 		}
 		driver.close();
 	}

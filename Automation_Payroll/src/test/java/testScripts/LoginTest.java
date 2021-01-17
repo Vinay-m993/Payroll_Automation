@@ -23,10 +23,10 @@ public class LoginTest extends ExcelDataUtil {
 	 * credential.clickonLogin(); }
 	 */
 
-	 //@Test(dataProvider = "readExcel")
-	public void verifyLoginCredentials(String name, String password) {
+	//@Test(dataProvider = "readExcel")
+	public void verifyLoginCredentials(String userName, String userPassword) {
 		LoginPage login = new LoginPage(driver);
-		login.userCredentials(name, password);
+		login.userCredentials(userName, userPassword);
 		String Actual = login.getTitle();
 		String Expected = "Login";
 		Assert.assertEquals(Actual, Expected, "Invalid title");
@@ -84,13 +84,13 @@ public class LoginTest extends ExcelDataUtil {
 		login.isElementClickable();
 	}
 
-	// @Test
-	public void verifyLogin() throws Exception {
+	//@Test(dataProvider = "readExcel")
+	public void verifyValidLogin(String name, String password) throws Exception {
 		LoginPage login = new LoginPage(driver);
-		login.clickonLogin();
+		login.userCredentials(name, password);
 		DashBoardPage dashboard = new DashBoardPage(driver);
 		String ActText = dashboard.getHeaderTitle();
-		String ExpText = "PAYROLL APPLICATION";
+		String ExpText = "Payroll Application";
 		Assert.assertEquals(ActText, ExpText, "Login Failure");
 
 	}
