@@ -23,7 +23,7 @@ public class LoginTest extends ExcelDataUtil {
 	 * credential.clickonLogin(); }
 	 */
 
-	//@Test(dataProvider = "readExcel")
+	// @Test(dataProvider = "readExcel")
 	public void verifyLoginCredentials(String userName, String userPassword) {
 		LoginPage login = new LoginPage(driver);
 		login.userCredentials(userName, userPassword);
@@ -84,7 +84,7 @@ public class LoginTest extends ExcelDataUtil {
 		login.isElementClickable();
 	}
 
-	//@Test(dataProvider = "readExcel")
+	// @Test(dataProvider = "readExcel")
 	public void verifyValidLogin(String name, String password) throws Exception {
 		LoginPage login = new LoginPage(driver);
 		login.userCredentials(name, password);
