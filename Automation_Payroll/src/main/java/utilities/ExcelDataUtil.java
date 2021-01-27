@@ -14,16 +14,22 @@ import jxl.read.biff.BiffException;
 public class ExcelDataUtil extends Base {
 
 	@DataProvider
-	public Object[][] readExcel() throws IOException, BiffException {
-		FileInputStream f = new FileInputStream("C:\\Users\\vinay\\OneDrive\\Documents\\Excel_Read\\ReadMyExcel.xls");
-		Workbook w = Workbook.getWorkbook(f);
-		Sheet s = w.getSheet("Sheet1");
-		int row = s.getRows();
-		int coloumn = s.getColumns();
-		System.out.println("row= " + "" + row + "coloumn= " + coloumn);
-		String[][] input = new String[row][coloumn];
-		for (int i = 0; i < row; i++) {
-			for (int j = 0; j < coloumn; j++) {
+	public static Object[][] readExcel(String FilePath, String SheetName) throws IOException, BiffException {
+
+		FileInputStream ExcelFile = new FileInputStream(FilePath);
+		Workbook w = Workbook.getWorkbook(ExcelFile);
+		Sheet s = w.getSheet(SheetName);
+
+		int startRow = s.getRows();
+		int startCol = s.getColumns();
+
+		System.out.println("Row= " + "" + startRow + "Coloumn= " + startCol);
+
+		String[][] input = new String[startRow][startCol];
+		for (int i = 0; i < startRow; i++) {
+
+			for (int j = 0; j < startCol; j++) {
+
 				Cell c = s.getCell(j, i);
 				input[i][j] = c.getContents();
 

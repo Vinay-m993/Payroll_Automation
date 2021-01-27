@@ -27,9 +27,6 @@ public class LoginTest extends ExcelDataUtil {
 	public void verifyLoginCredentials(String userName, String userPassword) {
 		LoginPage login = new LoginPage(driver);
 		login.userCredentials(userName, userPassword);
-		String Actual = login.getTitle();
-		String Expected = "Login";
-		Assert.assertEquals(Actual, Expected, "Invalid title");
 	}
 
 	// @Test

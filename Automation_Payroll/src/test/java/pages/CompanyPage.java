@@ -18,17 +18,35 @@ public class CompanyPage {
 	@FindBy(name = "Company[company_address]")
 	WebElement address;
 
-	@FindBy(id = "company-started_at]")
-	WebElement startedat;
+	@FindBy(xpath = "//input[@name='Company[started_at]']")
+	WebElement starteDate;
 
-	@FindBy(xpath = "//td[@class='today day']")
-	WebElement dateToday;
-
-	@FindBy(name = "//span[@class='cbx-icon']")
-	WebElement status;
+	@FindBy(xpath = "//i[@class='glyphicon glyphicon-ok']")
+	WebElement clickStatusBtn;
 
 	@FindBy(xpath = "//button[@class='btn btn-success']")
 	WebElement buttonSave;
+	
+	@FindBy(xpath = "//div[@class='col-sm-6 page-title']")
+	WebElement headerTitle;
+
+	@FindBy(xpath = "//footer[@class='footer-bg']")
+	WebElement footerTitle;
+
+	@FindBy(xpath = "//label[text()='Company Name']")
+	WebElement companyName;
+
+	@FindBy(xpath = "//label[text()='Company Email']")
+	WebElement companyEmail;
+	
+	@FindBy(xpath = "//label[text()='Company Address']")
+	WebElement companyAddress;
+	
+	@FindBy(xpath = "//label[text()='Started At']")
+	WebElement startedAt;
+	
+	@FindBy(xpath = "//span[@class='cbx-icon']")
+	WebElement status;
 
 	@FindBy(xpath = "//a[text()='Branch']")
 	WebElement branch;
@@ -42,7 +60,7 @@ public class CompanyPage {
 		return driver.getTitle();
 	}
 
-	public void enterCompanyname(String companyname) {
+	public void enterCompanyName(String companyname) {
 		name.clear();
 		name.sendKeys(companyname);
 	}
@@ -57,23 +75,45 @@ public class CompanyPage {
 		address.sendKeys(Address);
 	}
 
-	public void enterStartedDate(String startDate) {
-		startedat.clear();
-		// startedat.sendKeys(startDate);
-
+	public void enterStartedDate(String date) {
+		starteDate.clear();
+		starteDate.sendKeys(date);
 	}
 
-	public void enterDaytoday() {
-		startedat.click();
-		dateToday.click();
+	public void clickOnStatusBtn() {
+		clickStatusBtn.click();
 	}
 
-	public void clickonStatus() {
-		status.click();
-	}
-
-	public void clickSavebutton() {
+	public void clickSaveBtn() {
 		buttonSave.click();
+	}
+	
+	public String getHeaderTitleTxt() {
+		return headerTitle.getText();
+	}
+
+	public String getFooterTitleTxt() {
+		return footerTitle.getText();
+	}
+
+	public String getCompanyFieldTxt() {
+		return companyName.getText();
+	}
+
+	public String getCompanyEmailFieldTxt() {
+		return companyEmail.getText();
+	}
+	
+	public String getCompanyAddressFieldTxt() {
+		return companyAddress.getText();
+	}
+	
+	public String getStartedAtFieldTxt() {
+		return startedAt.getText();
+	}
+	
+	public boolean isStatusBoxClicked() {
+		return status.isDisplayed();
 	}
 
 	public BranchPage clickonBranchsubMenu() {

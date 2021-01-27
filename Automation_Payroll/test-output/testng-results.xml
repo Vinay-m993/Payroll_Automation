@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="14461" started-at="2021-01-17T16:42:39 IST" finished-at="2021-01-17T16:42:54 IST">
+  <suite name="Suite" duration-ms="23172" started-at="2021-01-19T20:57:36 IST" finished-at="2021-01-19T20:57:59 IST">
     <groups>
     </groups>
-    <test name="Test" duration-ms="14461" started-at="2021-01-17T16:42:39 IST" finished-at="2021-01-17T16:42:54 IST">
-      <class name="testScripts.LoginTest">
-        <test-method status="PASS" signature="launchBrowser(java.lang.String, java.lang.String)[pri:0, instance:testScripts.LoginTest@2833cc44]" name="launchBrowser" is-config="true" duration-ms="13353" started-at="2021-01-17T16:42:39 IST" finished-at="2021-01-17T16:42:53 IST">
+    <test name="Test" duration-ms="23172" started-at="2021-01-19T20:57:36 IST" finished-at="2021-01-19T20:57:59 IST">
+      <class name="testScripts.CompanyTest">
+        <test-method status="PASS" signature="launchBrowser(java.lang.String, java.lang.String)[pri:0, instance:testScripts.CompanyTest@2833cc44]" name="launchBrowser" is-config="true" duration-ms="14404" started-at="2021-01-19T20:57:36 IST" finished-at="2021-01-19T20:57:51 IST">
           <params>
             <param index="0">
               <value>
@@ -23,22 +23,34 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method status="PASS" signature="verifyCheckboxClicked()[pri:0, instance:testScripts.LoginTest@2833cc44]" name="verifyCheckboxClicked" duration-ms="399" started-at="2021-01-17T16:42:53 IST" finished-at="2021-01-17T16:42:53 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyCheckboxClicked -->
-        <test-method status="PASS" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:testScripts.LoginTest@2833cc44]" name="closeBrowser" is-config="true" duration-ms="590" started-at="2021-01-17T16:42:53 IST" finished-at="2021-01-17T16:42:54 IST">
+        <test-method status="PASS" signature="verifyStatusBoxClick(java.lang.String, java.lang.String)[pri:0, instance:testScripts.CompanyTest@2833cc44]" name="verifyStatusBoxClick" duration-ms="7975" started-at="2021-01-19T20:57:51 IST" data-provider="readExcel" finished-at="2021-01-19T20:57:59 IST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyCheckboxClicked status=SUCCESS method=LoginTest.verifyCheckboxClicked()[pri:0, instance:testScripts.LoginTest@2833cc44] output={null}]]]>
+                <![CDATA[carol]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1q2w3e4r]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyStatusBoxClick -->
+        <test-method status="PASS" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:testScripts.CompanyTest@2833cc44]" name="closeBrowser" is-config="true" duration-ms="253" started-at="2021-01-19T20:57:59 IST" finished-at="2021-01-19T20:57:59 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyStatusBoxClick status=SUCCESS method=CompanyTest.verifyStatusBoxClick(java.lang.String, java.lang.String)[pri:0, instance:testScripts.CompanyTest@2833cc44] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-      </class> <!-- testScripts.LoginTest -->
+      </class> <!-- testScripts.CompanyTest -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

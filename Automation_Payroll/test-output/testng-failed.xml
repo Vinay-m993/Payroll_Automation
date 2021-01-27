@@ -5,13 +5,13 @@
     <parameter name="Url" value="https://www.qabible.in/payrollapp/site/login"/>
     <parameter name="Browser" value="Chrome"/>
     <classes>
-      <class name="testScripts.LoginTest">
+      <class name="testScripts.CompanyTest">
         <methods>
-          <include name="verifyValidLogin" invocation-numbers="0"/>
           <include name="launchBrowser"/>
+          <include name="verifyStatusBoxClick" invocation-numbers="0"/>
           <include name="closeBrowser"/>
         </methods>
-      </class> <!-- testScripts.LoginTest -->
+      </class> <!-- testScripts.CompanyTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
